@@ -13,14 +13,12 @@ const FindUs = () => {
               title="GoFood"
               icon="/gofood-logo.png"
               variant="btn_white"
-              full
             />
             <Button 
               type="button"
               title="GrabFood"
               icon="/grabfood-logo.png"
               variant="btn_dark_amber_outline"
-              full
             />
           </div>
         </div>

@@ -17,15 +17,15 @@ const useTeams = () => {
     }
   }
 
-//   const fetchThreeUsers = async () => {
-//     try {
-//       const users = await randomUserApi.get('/?nat=us&gender=male&results=3')
+  const fetchThreeUsers = async () => {
+    try {
+      const users = await randomUserApi.get('/?nat=us&gender=male&results=3')
 
-//       setdata(users.data)
-//     } catch (error) {
-//       console.log(error)
-//     }
-//   }
+      setdata(users.data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   useEffect(() => {
     if (pathNames.includes('teams')) {
