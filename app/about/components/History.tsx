@@ -4,7 +4,7 @@ const History = () => {
 
       <div className="flex justify-center items-center flex-col md:flex-row md:gap-10">
         <div className="w-40 h-50 rounded-2xl overflow-hidden shadow-lg">
-          <img src="/about-01.png" className="w-full h-full object-cover" />
+          <img src="/about-01.webp" className="w-full h-full object-cover" />
         </div>
         <div className="md:max-w-md">
           <h1 className="bold-32 lg:bold-32 mb-4">Once Upon a Time</h1>
@@ -18,13 +18,13 @@ const History = () => {
           <p className="text-lg regular-16 text-gray-30">We curated our menu, our cozy lounge to invite you to join us in crafting unforgettable memories</p>
         </div>
         <div className="w-40 h-50 rounded-2xl overflow-hidden shadow-lg">
-          <img src="/about-02.png" className="w-full h-full object-cover" />
+          <img src="/about-02.webp" className="w-full h-full object-cover" />
         </div>
       </div>
 
       <div className="flex justify-center items-center flex-col md:flex-row md:gap-10 mt-10">
         <div className="w-40 h-50 rounded-2xl overflow-hidden shadow-lg">
-          <img src="/about-03.png" className="w-full h-full object-cover" />
+          <img src="/about-03.webp" className="w-full h-full object-cover" />
         </div>
         <div className="md:max-w-md">
           <h1 className="bold-32 lg:bold-32 mb-4">Welcome to Our Home</h1>

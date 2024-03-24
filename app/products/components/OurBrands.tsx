@@ -10,7 +10,7 @@ const OurBrands = () => {
       <section className="flexCenter flex-col">
       <div className="padding-container max-container w-800 bg-gray-90 rounded-2xl pb-10 pt-10 mt-5 mb-5">
         <div className="flex flex-wrap justify-between lg:gap-10">
-        <Image src="/Marquee_WFL.png" alt="WFL" width={300} height={150} />
+        <Image src="/Marquee_WFL.png" alt="WFL" width={200} height={100} />
           <p className="flex regular-5 xl:max-w-[500px] text-white items-center justify-center">Indulge in the aromatic flavors of traditional Indonesian comfort food with Warmindo For Life. From hearty bowls of steaming noodles to savory rice dishes, each bite is a taste of home. 🍜</p>
         </div>
       </div>
@@ -18,7 +18,7 @@ const OurBrands = () => {
     <section className="flexCenter flex-col">
       <div className="padding-container max-container w-800 bg-gray-90 rounded-2xl pb-10 pt-10 mt-5 mb-5">
         <div className="flex flex-wrap justify-between lg:gap-10">
-        <Image src="/Marquee_CFL.png" alt="CFL" width={300} height={150} />
+        <Image src="/Marquee_CFL.png" alt="CFL" width={200} height={100} />
           <p className="flex regular-5 xl:max-w-[500px] text-white items-center justify-center">Start your day on the right note with Coffee For Life. Sip on rich, freshly brewed coffee crafted from the finest beans, or indulge in specialty drinks that awaken your senses and elevate your coffee experience. ☕️</p>
         </div>
       </div>
@@ -26,7 +26,7 @@ const OurBrands = () => {
     <section className="flexCenter flex-col">
       <div className="padding-container max-container w-800 bg-gray-90 rounded-2xl pb-10 pt-10 mt-5 mb-5">
         <div className="flex flex-wrap justify-between lg:gap-10">
-        <Image src="/Marquee_RFL.png" alt="RFL" width={300} height={150} />
+        <Image src="/Marquee_RFL.png" alt="RFL" width={200} height={100} />
           <p className="flex regular-5 xl:max-w-[500px] text-white items-center justify-center">Treat yourself to the irresistible simplicity of Roti Bakar For Life. Crispy toasted bread, generously slathered with creamy spreads and flavorful toppings, offer a delightful combination of crunch and comfort in every bite. 🍞</p>
         </div>
       </div>
@@ -34,7 +34,7 @@ const OurBrands = () => {
     <section className="flexCenter flex-col">
       <div className="padding-container max-container w-800 bg-gray-90 rounded-2xl pb-10 pt-10 mt-5 mb-5">
         <div className="flex flex-wrap justify-between lg:gap-10">
-        <Image src="/Marquee_EFL.png" alt="EFL" width={300} height={150} />
+        <Image src="/Marquee_EFL.png" alt="EFL" width={200} height={100} />
           <p className="flex regular-5 xl:max-w-[500px] text-white items-center justify-center">Quench your thirst with the vibrant flavors of Es Buah & Jus For Life. From refreshing fruit cocktails to freshly squeezed juices, each sip is a burst of natural goodness, keeping you cool and hydrated throughout the day. 🥤</p>
         </div>
       </div>
