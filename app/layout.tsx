@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
-  title: "For Life Group",
-  description: "Culinary, Service, Lifestyle",
+  title: "EVENRITE",
+  description: "Navigating You Rite",
 };
 
 export default function RootLayout({

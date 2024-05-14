@@ -1,4 +1,3 @@
-// components/Testimonial.tsx
 import React from 'react';
 
 const Testimonial = () => {

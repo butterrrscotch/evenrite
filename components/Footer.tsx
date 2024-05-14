@@ -8,9 +8,9 @@ const Footer = () => {
     <footer className="flexCenter mb-24 mr-20 ml-20">
       <div className="padding-container max-container flex w-full flex-col gap-14">
         <div className="flex flex-col items-start justify-center gap-[25%] md:flex-row">
-          <Link href="/" className="mb-10">
-            <Image src="/For Life Logo.png" alt="logo" width={100} height={50}/>
-          </Link>
+        <Link href="/">
+        <span className="text-orange-600 font-bold text-lg cursor-pointer">EVENRITE</span>
+      </Link>
 
           <div className='flex flex-wrap gap-10 sm:justify-between md:flex-1'>
             {FOOTER_LINKS.map((columns) => (
@@ -56,8 +56,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border bg-gray-20" />
-        <p className="regular-14 w-full text-center text-gray-30">2024 For Life | All rights reserved</p>
+        {/* 
+        <p className="regular-14 w-full text-center text-gray-30">2024 For Life | All rights reserved</p> */}
       </div>
     </footer>
   )

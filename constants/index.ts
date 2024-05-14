@@ -1,18 +1,16 @@
 export const NAV_LINKS = [
-    { href: '/', key: 'home', label: 'Home' },
-    { href: '/about', key: 'about_us', label: 'About Us' },
-    { href: '/products', key: 'brands', label: 'Our Brands' },
-    { href: '/teams', key: 'our_team ', label: 'Our Team' },
+    { href: '/eventlist', key: 'find_events', label: 'Find Events' },
+    { href: '/createevent', key: 'create_events', label: 'Create Events' },
   ];
   
   export const FOOTER_LINKS = [
     {
-      title: 'Our Brands',
+      title: 'Browse Events',
       links: [
-        'Warmindo For Life',
-        'Coffee For Life',
-        'Roti Bakar For Life',
-        'Es Buah & Jus For Life',
+        'Concert Around Jakarta',
+        'Bandung Art & Exhibition',
+        'Bali Event To Attend',
+        'Events in Yogyakarta Today',
       ],
     },
   ];
@@ -20,8 +18,8 @@ export const NAV_LINKS = [
   export const FOOTER_CONTACT_INFO = {
     title: 'Contact Us',
     links: [
-      { icon: '/email.png', value: 'contact@forlife.com' },
-      { icon: '/location.png', value: 'Jl. Puri Beta Selatan Raya' },
+      { icon: '/email.png', value: 'contact@evenrite.com' },
+      { icon: '/location.png', value: 'Jakarta' },
     ],
   };
   
