@@ -1,16 +1,26 @@
-import React from 'react';
-import Link from 'next/link'; 
+"use client" 
+
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 
 const EventRecomendation = () => {
- 
-  const recommendedEvents = [
-    { title: "Babe Fest", date: "April 10, 2024", price: "Free", image: "/event1.png" },
-    { title: "Night Bazaar Magic", date: "May 15, 2024", price: "Rp 350.000", image: "/event2.png" },
-    { title: "Tech Conference 2024", date: "June 20, 2024", price: "Rp 800.000", image: "/event3.png" },
-    { title: "Metaverso 2022", date: "July 25, 2024", price: "Free", image: "/event4.png" },
-    { title: "TED X", date: "August 30, 2024", price: "Rp 75.000", image: "/event5.png" },
-    { title: "Music Event of The Summer", date: "September 5, 2024", price: "Rp 1.350.000", image: "/event6.png" },
-  ];
+  const [recommendedEvents, setRecommendedEvents] = useState([]);
+
+  useEffect(() => {
+
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch('http://localhost:3002/events');
+        const events = await response.json();
+        setRecommendedEvents(events);
+        console.log(response)
+      } catch (error) {
+        console.error('Error fetching events:', error);
+      }
+    };
+
+    fetchEvents();
+  }, []);
 
   return (
     <section className="py-12">
@@ -21,15 +31,13 @@ const EventRecomendation = () => {
         {recommendedEvents.map((event, index) => (
           <div key={index} className="flex flex-col rounded-md border border-gray-300 p-5">
             {/* Event image */}
-            <img src={event.image} alt={event.title} className="rounded-md mb-4" style={{ width: "320px", height: "180px" }} />
+            <img src={event.image} className="rounded-md mb-4" style={{ width: "320px", height: "180px" }} />
             {/* Event title */}
-            <Link href="/eventdetails"> {/* Specify the path to EventDetails page */}
-              <a className="font-semibold text-lg hover:underline">{event.title}</a>
+            <Link href={`/eventdetails?id=${event.id}`}> {/* Specify the path to EventDetails page */}
+              <a className="font-semibold text-lg hover:underline text-orange-500">{event.name}</a>
             </Link>
-            {/* Event date */}
-            <p className="text-gray-500">{event.date}</p>
             {/* Event price */}
-            <p className="font-semibold">{event.price}</p>
+            <p className="text-sm text-zinc-500">{event.price}</p>
           </div>
         ))}
       </div>

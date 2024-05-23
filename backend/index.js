@@ -14,8 +14,42 @@ const corsOptions = {
 app.use(express.json());
 app.use(cors(corsOptions));
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.get("/events", async (req, res) => {
+  const events = await prisma.events.findMany();
+  res.json(events);
+});
+
+app.get("/events/search", async (req, res) => {
+  const { query } = req.query;
+  console.log(query);
+  try {
+    const result = await prisma.events.findMany({
+      where: {
+        name: {
+          startsWith: query,
+        },
+      },
+    });
+    res.status(201).json(result);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+app.get("/events/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const event = await prisma.events.findUnique({
+      where: { id: parseInt(id) },
+    });
+    if (event) {
+      res.json(event);
+    } else {
+      res.status(404).json({ error: "Event not found" });
+    }
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch event details" });
+  }
 });
 
 app.post("/events", async (req, res) => {
