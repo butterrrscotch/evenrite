@@ -20,14 +20,14 @@ app.get("/events", async (req, res) => {
 });
 
 app.get("/events/search", async (req, res) => {
-  const { query } = req.query;
-  console.log(query);
+  const { query, category } = req.query;
   try {
     const result = await prisma.events.findMany({
       where: {
-        name: {
-          startsWith: query,
-        },
+        AND: [
+          query ? { name: { startsWith: query } } : {},
+          category ? { category: { equals: category } } : {},
+        ],
       },
     });
     res.status(201).json(result);
